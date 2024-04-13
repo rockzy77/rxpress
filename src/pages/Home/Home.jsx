@@ -1,14 +1,12 @@
-import { useState } from "react";
 import { lightTheme } from "../../components/Colors";
-import { MdKeyboardArrowRight } from "react-icons/md";
+import CategoryProduct from "./CategoryProducts";
+import Brands from "./Brands";
+import Footer from "../../components/Footer";
 
 
 const Home = () => {
 
-    const [selectedHP, setSelectedHP] = useState('All Disease');
-    const [selectedCategory, setSelectedCategory] = useState('Vitamins & Suppliments');
-
-    const healthProblems = [
+    const healthCategories = [
         'All Disease',
         'Diabetes',
         'Heart',
@@ -20,7 +18,7 @@ const Home = () => {
         'Respiratory'
     ];
 
-    const categories = [
+    const generalCategories = [
         'Vitamins & Suppliments',
         'Personal Care',
         'Baby Care',
@@ -28,6 +26,7 @@ const Home = () => {
         'Ayurvedic',
         'Sexual Wellness'
     ];
+
 
     return <section style={{
         backgroundColor: lightTheme.primaryColor,
@@ -53,125 +52,17 @@ const Home = () => {
             </div>
         </main>
 
-        {/* Health Problem Browse Section */}
-        <div className="categorySection">
-            <h2>Shop By Health Problems</h2>
-            <div className="categoryRow">
+        {/* Health Category Section */}
+        <CategoryProduct categories={healthCategories} pup={true} title={"Shop By Health Problems"} categoryProducts={[0,0,0,0,0,0,0,0]} />
 
-                {
-                    healthProblems.map((item) => {
-                        return <div onClick={() => {
-                            setSelectedHP(item);
-                        }} className={`category-item ${selectedHP === item ? 'active' : ''}`}>
-                            <span>{item}</span>
-                        </div>
-                    })
-                }
-            </div>
-        </div>
-
-        {/*  Health Problem Products */}
-        <div className="categoryProducts">
-            <div className="categoryProductGrid">
-
-                {
-                    [0, 0, 0, 0, 0, 0, 0, 0].map(item => {
-                        return <div className="product-card">
-                            <div className="product-tumb">
-                                <img src={process.env.PUBLIC_URL + "/Assets/main.jpg"} alt="" />
-                            </div>
-                            <div className="product-details">
-                                <h4 style={{
-                                    color: lightTheme.secondaryColor
-                                }}>Women leather bag</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                                <div className="product-bottom-details">
-                                    <div style={{
-                                        color: lightTheme.sideColor
-                                    }} className="product-price">$230.99</div>
-
-                                </div>
-                            </div>
-                        </div>
-                    })
-                }
-
-
-
-            </div>
-
-            <div className="seeMorecont">
-                <span style={{
-                    color: lightTheme.sideColor
-                }} className="seeMore">See More</span>
-                <span>
-                <MdKeyboardArrowRight style={{
-                    position: 'relative',
-                    top: 3,
-                    fontSize: 20
-                }}/>
-
-                </span>
-            </div>
-        </div>
-
-
-        {/* Category Section */}
-        <div className="categorySection">
-            <h2>Shop By Category</h2>
-            <div className="categoryRow">
-
-                {
-                    categories.map((item) => {
-                        return <div onClick={() => {
-                            setSelectedCategory(item);
-                        }} className={`category-item ${selectedCategory === item ? 'active' : ''}`}>
-                            <span>{item}</span>
-                        </div>
-                    })
-                }
-            </div>
-        </div>
-
-        {/* Category Products */}
-        <div className="categoryProducts">
-            <div className="categoryProductGrid">
-
-                {
-                    [0, 0, 0, 0, 0, 0, 0, 0].map(item => {
-                        return <div className="product-card">
-                            <div className="product-tumb">
-                                <img src={process.env.PUBLIC_URL + "/Assets/main.jpg"} alt="" />
-                            </div>
-                            <div className="product-details">
-                                <h4 style={{
-                                    color: lightTheme.secondaryColor
-                                }}>Women leather bag</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                                <div className="product-bottom-details">
-                                    <div style={{
-                                        color: lightTheme.sideColor
-                                    }} className="product-price">$230.99</div>
-
-                                </div>
-                            </div>
-                        </div>
-                    })
-                }
-
-            </div>
-            <div className="seeMorecont">
-                <span style={{
-                    color: lightTheme.sideColor
-                }} className="seeMore">See More</span>
-            </div>
-        </div>
+        {/* General Category Section */}
+        <CategoryProduct categories={generalCategories} pup={false} title={"Shop By Categories"} categoryProducts={[0,0,0,0,0,0,0,0]} />
 
 
         {/* Partner Section */}
-        <div className="partnerSection">
+        <Brands />
 
-        </div>
+        <Footer />
 
 
 

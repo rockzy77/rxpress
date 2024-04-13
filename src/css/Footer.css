@@ -1,0 +1,44 @@
+footer{
+    padding: 3%;
+    color: #ffffff;
+}
+
+.footer-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-row h4{
+    font-size: 1em;
+    text-decoration: underline;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.footer-row ul li{
+    font-size: 0.9em;
+    list-style: none;
+    font-weight: 500;
+}
+
+.footer-row ul li *{
+    color: rgb(223, 223, 223);
+    text-decoration: none;
+    transition: 0.1s ease-in-out;
+}
+
+.footer-row ul li *:hover{
+    color: #16317a
+}
+
+.footer-row a{
+    color: rgb(223, 223, 223);
+}
+
+
+.footer-row p{
+    font-size: 0.9em;
+    font-weight: 500;
+    color: rgb(223, 223, 223);
+}
