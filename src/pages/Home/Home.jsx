@@ -7,15 +7,14 @@ import Footer from "../../components/Footer";
 const Home = () => {
 
     const healthCategories = [
-        'All Disease',
-        'Diabetes',
-        'Heart',
-        'Liver',
-        'Stomach',
-        'Kidney',
-        'Bone & Muscles',
-        'Eye',
-        'Respiratory'
+        'Diabetes Care',
+        'Heart Care',
+        'Liver Care',
+        'Stomach Care',
+        'Kidney Care',
+        'Bone & Muscles Care',
+        'Eye Care',
+        'Respiratory Care'
     ];
 
     const generalCategories = [
@@ -53,10 +52,10 @@ const Home = () => {
         </main>
 
         {/* Health Category Section */}
-        <CategoryProduct categories={healthCategories} pup={true} title={"Shop By Health Problems"} categoryProducts={[0,0,0,0,0,0,0,0]} />
+        <CategoryProduct categories={healthCategories} pup={true} title={"Shop By Health Problems"} categoryProducts={[0,0,0,0,0,0,0,0,0,0]} />
 
         {/* General Category Section */}
-        <CategoryProduct categories={generalCategories} pup={false} title={"Shop By Categories"} categoryProducts={[0,0,0,0,0,0,0,0]} />
+        <CategoryProduct categories={generalCategories} pup={false} title={"Shop By Categories"} categoryProducts={[0,0,0,0,0,0,0,0,0,0]} />
 
 
         {/* Partner Section */}

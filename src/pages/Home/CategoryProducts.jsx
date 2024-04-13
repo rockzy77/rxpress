@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { lightTheme } from "../../components/Colors";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { NavLink } from "react-router-dom";
+import { ProductGrid } from "../../components/ProductGrid";
 
 
 const CategoryProduct = (props) => {
@@ -34,35 +36,11 @@ const CategoryProduct = (props) => {
 
         {/* Category Products */}
         <div className="categoryProducts">
-            <div className="categoryProductGrid">
-
-                {
-                    props.categoryProducts.map(item => {
-                        return <div className="product-card">
-                            <div className="product-tumb">
-                                <img src={process.env.PUBLIC_URL + "/Assets/main.jpg"} alt="" />
-                            </div>
-                            <div className="product-details">
-                                <h4 style={{
-                                    color: lightTheme.secondaryColor
-                                }}>Women leather bag</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                                <div className="product-bottom-details">
-                                    <div style={{
-                                        color: lightTheme.sideColor
-                                    }} className="product-price">$230.99</div>
-
-                                </div>
-                            </div>
-                        </div>
-                    })
-                }
-
-
-
-            </div>
+            
+            <ProductGrid products={props.categoryProducts}/>
 
             <div className="seeMorecont">
+                <NavLink to={`${selectedCategory === 'All Diseases' ?  `/search` : `/search/${selectedCategory}`}`}>
                 <span style={{
                     color: lightTheme.sideColor
                 }} className="seeMore">See More</span>
@@ -74,6 +52,7 @@ const CategoryProduct = (props) => {
                 }}/>
 
                 </span>
+                </NavLink>
             </div>
         </div></>
 }
