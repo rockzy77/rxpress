@@ -1,7 +1,8 @@
 import { lightTheme } from "../../components/Colors";
 import CategoryProduct from "./CategoryProducts";
-import Brands from "./Brands";
+// import Brands from "./Brands";
 import Footer from "../../components/Footer";
+import { NavBar } from "../../components/NavBar";
 
 
 const Home = () => {
@@ -31,7 +32,12 @@ const Home = () => {
         backgroundColor: lightTheme.primaryColor,
         color: lightTheme.textColor
     }} className="homeSection" id="homeSection">
+        <NavBar />
 
+
+        <div style={{
+            height: 69
+        }}></div>
         {/* Home Main Section */}
         <main className="homeMainSection">
             <div className="hmS-image">
@@ -52,16 +58,18 @@ const Home = () => {
         </main>
 
         {/* Health Category Section */}
-        <CategoryProduct categories={healthCategories} pup={true} title={"Shop By Health Problems"} categoryProducts={[0,0,0,0,0,0,0,0,0,0]} />
+        <CategoryProduct categories={healthCategories} pup={true} title={"Shop By Health Problems"} categoryProducts={[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]} />
 
         {/* General Category Section */}
-        <CategoryProduct categories={generalCategories} pup={false} title={"Shop By Categories"} categoryProducts={[0,0,0,0,0,0,0,0,0,0]} />
+        <CategoryProduct categories={generalCategories} pup={false} title={"Shop By Categories"} categoryProducts={[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]} />
 
 
         {/* Partner Section */}
-        <Brands />
+        {/* <Brands /> */}
+
 
         <Footer />
+
 
 
 

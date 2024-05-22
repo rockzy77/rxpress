@@ -1,0 +1,186 @@
+
+#productDet{
+    min-height: 100vh;
+    width: 100%;
+}
+
+.productDetRow{
+    display: flex;
+}
+
+.productDetImage{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    padding: 20px 10px;
+}
+
+.productDetContent{
+    flex: 1;
+    padding: 1%;
+    border-left: 1px solid #747474;
+}
+
+.productDetImage .mainImage{
+    width: 450px;
+    height: 400px;
+    background-color: red;
+}
+
+.productDetImage .mainImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.productDetImage .sideImagesRow .imgRow img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sideImagesRow{
+    gap: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.imgRow{
+    height: 80px;
+    width: 80px;
+    background-color: red;
+}
+
+.product-name{
+    font-size: 2em;
+}
+
+.product-price{
+    display: flex;
+    gap: 0.2em;
+    padding-top: 10px;
+}
+
+.txSpan{
+    font-size: 0.8em;
+}
+
+.addcartcont{
+    display: flex;
+    gap: 1em;
+    padding-top: 20px;
+}
+
+
+
+.addcartcont button{
+    cursor: pointer;
+    padding: 12px 30px;
+    transition: 0.3s ease-in-out;
+    border-radius: 3px;
+}
+
+.addcartcont button:hover{
+    background-color: #ffffff !important;
+    color: #16317a !important;
+    box-shadow: 8px 10px #16317a;
+}
+
+.addcartcont button:nth-child(2):hover{
+    color: #16317a !important;
+}
+
+.product-subtitle{
+    font-size: 1.1em;
+    margin-top: 25px;
+}
+.product-subdes{
+    font-size: 0.9em;
+}
+
+.product-item-list{
+    padding: 10px 20px;
+}
+
+/* Comment Section  */
+
+.commentSection textarea{
+    width: calc(100% - 20px);
+    height: 150px;
+    resize: none;
+    border: 1px solid #232323;
+    border-radius: 5px;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.commentSection .postBtn{
+    padding: 8px 26px;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.comment-tile{
+    margin-top: 20px;
+}
+
+.comment-tile-info .user-info{
+    display: flex;
+}
+
+.comment-tile-info .user-info .user-info-img{
+    height: 40px;
+    width: 40px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.comment-tile-info .user-info-des{
+    padding: 10px;
+    padding-top: 0;
+}
+
+
+.comment-tile-info .user-info-des p{
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.comment-tile-info .user-info-des span{
+    font-size: 0.8em;
+    position: relative;
+    bottom: 5px;
+    font-weight: 500;
+    color: rgb(51, 51, 51);
+}
+
+.comment-tile-info .review{
+    padding: 5px;
+    padding-top: 0;
+    position: relative;
+    bottom: 8px;
+    display: flex;
+}
+
+
+.comment-tile-info .review .star {
+    color: rgb(51, 51, 51);
+}
+
+.comment-tile-info .review .gold {
+    color: rgb(235, 199, 0);
+}
+
+.comment-tile-info .content p{
+    font-size: 0.8em;
+    padding: 10px;
+    padding-top: 0;
+    position: relative;
+    bottom: 5px;
+}

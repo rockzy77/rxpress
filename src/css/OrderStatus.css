@@ -1,0 +1,60 @@
+
+#orderStatus{
+    min-height: 100vh;
+    background-color: #e8e7e8;
+}
+
+.orderStatusCont{
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orderStatusBox{
+    width: 600px;
+    padding: 1%;
+    box-shadow: 2px 2px 12px #999999;
+}
+
+.orderStatusHead{
+    text-align: center;
+}
+
+.orderStatusHead.success h2{
+    color: green;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.orderStatusHead.success h3{
+    color: #232323;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.orderStatusHead.success p{
+    margin-top: 10px;
+}
+
+.orderStatusDetails h4{
+    text-decoration: underline;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+}
+
+.orderStatusDetails p{
+    font-size: 0.9em;
+}
+
+.orderStatusDetails button{
+    color: #ffffff;
+    padding: 10px 26px;
+    border-radius: 2px;
+    border: none;
+    margin-top: 10px;
+    outline: none;
+    cursor: pointer;
+}

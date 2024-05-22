@@ -1,4 +1,4 @@
-#shopSection{
+.shopRow{
     display: flex;
 }
 
@@ -17,4 +17,140 @@
     font-size: 1.4em;
     font-weight: 600;
     margin-bottom: 20px;
+}
+
+/* Pagination Bar */
+
+.paginationBar{
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+}
+
+.paginationTile{
+    height: 40px;
+    border-radius: 3px;
+    width: 40px;    
+    display: flex;
+    background-color: #8a8a8a;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.paginationTile:hover{
+    background-color: #3db88b;
+}
+
+
+.paginationTile.active{
+    background-color: #3db88b;
+}
+
+
+/* Filter Secttion */
+
+.sideBar{
+    padding: 0.8%;
+}
+
+.filterTitle{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.filterSubTitle{
+    padding: 10px 0 5px 0;
+    font-size: 1em;
+    font-weight: 500;
+}
+
+.filterList{
+    list-style: none;
+}
+
+.filterList li{
+    font-size: 0.9em;
+}
+
+.filterList li .filterListA{
+    color:  #232323;
+    text-decoration: none;
+}
+
+.filterList li .filterListA.selected{
+    color:  #3db88b;
+}
+
+.filterList li .filterListA:hover{
+    color:  #3db88b;
+}
+
+#brandCheckbox{
+    border: 1px solid #232323;
+}
+
+.category {
+    display: flex;
+    align-items: center;
+}
+
+.category label {
+    cursor: pointer;
+    display: flex;
+    font-size: 0.9em;
+}
+
+.category input {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+}
+
+.category label::before {
+    content: '';
+    position: relative;
+    top: 3.5px;
+    left: 2px;
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: .15em;
+    margin-right: .5em;
+}
+
+.catlab.dark::before {
+    border: 0.5px solid #ffffff;
+}
+
+.catlab.light::before {
+    border: 0.5px solid #232323;
+}
+
+.catlab.light:hover::before,
+.category input:hover+label::before {
+    background-color: #3db88b;
+}
+
+.catlab.dark:hover::before,
+.category input:hover+label::before {
+    background-color: #3db88b;
+}
+
+
+.category input:checked+label::before {
+    content: '\002714';
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category input:checked+.catlab.light::before {
+    background-color: #3db88b;
+}
+
+.category input:checked+.catlab.dark::before {
+    background-color: #3db88b;
 }

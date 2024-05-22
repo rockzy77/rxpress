@@ -1,0 +1,162 @@
+
+#checkoutSection{
+    min-height: 100vh;
+    background-color: #e8e7e8;
+}
+
+.checkoutRow{
+    display: flex;
+    padding: 2%;
+}
+
+.checkoutDetailSection{
+    width: 70%;
+}
+
+.checkoutConfirmationSection{
+    flex: 1;
+}
+
+.checkoutHeader{
+    display: flex;
+    justify-content: space-evenly;
+    height: 30px;
+    padding: 1%;
+}
+
+.checkoutHeader p{
+    cursor: pointer;
+    font-weight: bold;
+    color: rgb(84, 84, 84);
+}
+
+.checkoutHeader p.active{
+    color: #232323
+}
+
+.vr{
+    width: 1px;
+    height: 100%;
+    background-color: rgb(198, 198, 198);
+}
+
+.addressSection, .paymentSection{
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+}
+
+.addressSection form{
+    width: 100%;
+    padding: 3%;
+}
+
+
+.addressSection label{
+    font-size: 0.8em;
+    font-weight: 600;
+}
+
+.addressSection input{
+    height: 35px;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #232323;
+    outline: none;
+    padding: 0 5px;
+}
+
+.addressSection textarea{
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid #232323;
+    outline: none;
+    padding: 5px 5px;
+    resize: none;
+}
+
+.addressSection .f-row{
+    margin: 10px 0;
+}
+
+.addressSection button{
+    padding: 10px 32px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.paymentSection .payment-option{
+    padding: 1.5%;
+}
+
+.payment-option label{
+    display: flex;
+    gap: 1em;
+    position: relative;
+    top: 4px;
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.custom-radio {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    user-select: none;
+  }
+  
+  .custom-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .custom-radio .checkmark {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  
+  .custom-radio input:checked ~ .checkmark {
+    background-color: #ffffff;
+    border: 1px solid #16317a;
+  }
+  
+  .custom-radio .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .custom-radio input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .custom-radio .checkmark:after {
+    top: 2.5px;
+    left: 2.5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #16317a;
+  }
+
+
+  .checkoutConfirmationSection {
+    flex: 1;
+    padding: 0 2%;
+    height: 60vh;
+
+}

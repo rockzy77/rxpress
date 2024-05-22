@@ -3,6 +3,8 @@ import { useLocation } from "react-router-dom";
 import { lightTheme } from "../../components/Colors";
 import FilterSection from "./FilterSection";
 import ProductsSection from "./ProductsSection";
+import Footer from "../../components/Footer";
+import { NavBar } from "../../components/NavBar";
 
 const Shop = (props) => {
 
@@ -12,30 +14,45 @@ const Shop = (props) => {
 
     const [locatedCategory, setLocatedCategory] = useState('');
 
-    useEffect(()=>{
+    useEffect(() => {
         var path = location.pathname;
 
-        if(path.replace("/search", "") === ""){
+        if (path.replace("/search", "") === "") {
             setIsCategoryShop(false);
         }
-        else{
+        else {
             setIsCategoryShop(true);
             setLocatedCategory(decodeURI(path.replace("/search/", "")));
         }
 
     }, [isCategoryShop, location.pathname]);
 
-    return <section style={{
-        backgroundColor: lightTheme.primaryColor,
-        color: lightTheme.textColor
-    }} className="shopSection" id="shopSection">
+    return <section className="shopSection" id="shopSection">
 
-        {/* Filters */}
-        <FilterSection />
+        <NavBar />
 
-        {/* Products */}
-        <ProductsSection category={locatedCategory} />
 
+        <div style={{
+            height: 69
+        }}></div>
+        <div style={{
+            backgroundColor: lightTheme.primaryColor,
+            color: lightTheme.textColor
+        }} className="shopRow">
+
+            {/* Filters */}
+            <FilterSection category={locatedCategory} />
+
+            {/* Products */}
+            <ProductsSection category={locatedCategory} />
+
+
+
+
+
+        </div>
+
+        <Footer />
     </section>
 }
 

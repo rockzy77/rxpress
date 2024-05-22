@@ -55,3 +55,45 @@
     font-size: 1.2em;
     cursor: pointer;
 }
+
+.accountOption{
+    width: 200px;
+    padding: 10px;
+    background-color: white;
+    position: absolute;
+    right: 5px;
+    top: 20px;
+    box-shadow: 2px 2px 12px #888888;
+}
+
+.cplink{
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+.accountOption input{
+    padding-left: 5px;
+    width: 96%;
+    margin-top: 10px;
+    height: 25px;
+    outline: none;
+    border: 1px solid #232323;
+    border-radius: 3px;
+}
+
+.accountOption .buttonFlex{
+    display: flex;
+    justify-content: space-around;
+    gap: 1em;
+}
+
+.accountOption button{
+    margin-top: 10px;
+    height: 30px;
+    cursor: pointer;
+    flex: 1;
+    border: none;
+    border-radius: 3px;
+    color: #ffffff
+}
