@@ -109,11 +109,11 @@ const Checkout = (props) => {
                             <p>Price</p>
                             <p>Rs 0</p>
                         </div>
-
+{/* 
                         <div className="price-row">
                             <p>Discount</p>
                             <p>Rs 0</p>
-                        </div>
+                        </div> */}
 
 
                         <div className="price-row">

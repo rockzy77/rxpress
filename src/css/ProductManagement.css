@@ -1,0 +1,58 @@
+
+#productManagement{
+    padding: 2%;
+    min-height: 100vh;
+    background-color: #3db88b;
+}
+
+#productManagement h1{
+    color: #ffffff;
+}
+
+
+#productManagement input[type='text']{
+    height: 35px;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding-left: 5px;
+    width: 99%;
+    border: 1px solid #232323;
+}
+
+#productManagement .createPdBtn{
+    margin: 5px 0;
+    padding: 12px 26px;
+    width: 100%;
+    border: none;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #3db88b;
+}
+
+
+#productManagement textarea{
+    height: 100px;
+    border-radius: 5px;
+    margin: 5px 0;
+    padding-left: 5px;
+    width: 99%;
+    border: 1px solid #232323;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+    gap: 2em    ;
+    justify-content: space-between;
+}
+
+#productManagement .imgcont{
+    margin: 10px 0;
+    /* color: #ffffff !important; */
+}
+
+.createProductCont{
+    padding: 10px;
+    background-color: #eefff9;
+}

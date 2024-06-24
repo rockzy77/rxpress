@@ -8,6 +8,7 @@ import './css/Cart.css';
 import './css/Checkout.css';
 import './css/OrderStatus.css';
 import './css/Login.css';
+import './css/ProductManagement.css';
 
 
 

@@ -1,7 +1,43 @@
+import { useContext, useState } from "react";
 import { lightTheme } from "../../components/Colors";
+import { loginUserDB } from "../../js/userScripts";
+import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../provider/AuthProvider";
 
 
 const Login = (props) => {
+
+    const [email, setEmail] = useState('');
+
+    const [password, setPassword] = useState('');
+
+    const AuthData = useContext(AuthContext);
+
+    const nav = useNavigate();
+
+    const loginFunction = async()=>{
+        if(email === '' || password === ''){
+            return ;
+        }
+
+        var res = await loginUserDB({
+            email,
+            password,
+            authType: 'login'
+        });
+
+        if(res.success){
+            AuthData.setUser(res.user);
+            alert("Login Successfully");
+            nav("/");
+        }
+        else{
+            alert("Error: "+res.error);
+        }
+        
+
+    }
+    
     return <section style={{
         backgroundColor: lightTheme.secondaryColor
     }} id="login">
@@ -14,7 +50,9 @@ const Login = (props) => {
                 <form>
                     <label htmlFor="">
                         Email <br />
-                        <input type="email" name="lemail" id="lemail" />
+                        <input onChange={(e)=>{
+                            setEmail(e.target.value)
+                        }} type="email" name="lemail" id="lemail" />
                     </label>
 
                     <div className="spacer">
@@ -23,14 +61,19 @@ const Login = (props) => {
 
                     <label htmlFor="">
                         Password <br />
-                        <input type="password" name="lpassword" id="lpassword" />
+                        <input onChange={(e)=>{
+                            setPassword(e.target.value);
+                        }} type="password" name="lpassword" id="lpassword" />
                     </label>
 
                     <div className="spacer">
 
                     </div>
 
-                    <button style={{
+                    <button onClick={(e)=>{
+                        e.preventDefault();
+                        loginFunction();
+                    }} style={{
                         backgroundColor: lightTheme.secondaryColor
                     }}>Log In</button>
 

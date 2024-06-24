@@ -7,6 +7,10 @@ import Checkout from "../pages/Checkout/Checkout"
 import OrderSuccess from "../pages/OrderStatus/OrderSuccess"
 import ScrollToTop from "../components/ScrollToTop"
 import SignUp from "../pages/Auth/SignUp"
+import CreateProduct from "../pages/Admin/CreateProduct"
+import UserManagement from "../pages/Admin/UserManagement"
+import ProtectedRoute from "./ProtectedRoutes"
+import NotFoundPage from "../pages/404/404"
 
 export const CustomRouter = () => {
     return <BrowserRouter>
@@ -22,8 +26,20 @@ export const CustomRouter = () => {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/orderSuccess" element={<OrderSuccess />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/404" element={<NotFoundPage />} />
+        <Route path="/admin/*" element={<ProtectedRoute>
+            <AdminRoutes />
+        </ProtectedRoute>} />
+        <Route path="*" element={<NotFoundPage />} />
     </Routes>
    </div>
     
     </BrowserRouter>
+}
+
+export const AdminRoutes = () => {
+    return <Routes>
+        <Route path="/productManagement" element={<CreateProduct />} />
+        <Route path="/userManagement" element={< UserManagement/>} />
+    </Routes>
 }

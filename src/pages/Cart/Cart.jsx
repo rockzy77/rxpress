@@ -11,9 +11,6 @@ const Cart = () => {
 
     const [cartPrice, setCartPrice] = useState(0);
 
-    const [discountAmount, setDiscountAmount] = useState(0);
-
-    const [discountController, setDiscountController] = useState('');
 
     const increaseCart = (id) => {
         var indM = 0;
@@ -52,7 +49,6 @@ const Cart = () => {
 
         setCartPrice(cp);
 
-        setDiscountAmount(0);
     }, [shopData.cartItems]);
 
     return <section style={{
@@ -126,22 +122,7 @@ const Cart = () => {
 
             <div className="cart-checkout-section">
                 <div className="cart-checkout-cont">
-                    <div className="discount-box">
-                        <input onKeyUp={(e)=>{
-                                setDiscountController(e.target.value);
-                        }} placeholder="Enter Coupon Code" type="text" /> <br />
-                        <button onClick={()=>{
-                            if(discountController.toLowerCase() === 'enjoy10'){
-                                setDiscountAmount(10);
-                                alert("Success! Discount has been applied")
-                            }
-                            else{
-                                alert("Failed! Cannot find applied coupon")
-                            }
-                        }} style={{
-                            backgroundColor: lightTheme.secondaryColor
-                        }}>Apply Discount</button>
-                    </div>
+                 
 
                     <div style={{
                         color: lightTheme.textColor
@@ -158,10 +139,6 @@ const Cart = () => {
                             <p>Rs {cartPrice}</p>
                         </div>
 
-                        <div className="price-row">
-                            <p>Discount</p>
-                            <p>Rs {discountAmount}</p>
-                        </div>
 
                         <hr />
 
@@ -176,8 +153,6 @@ const Cart = () => {
                         pathname: '/checkout',
                         state: {
                             checkoutItems: shopData.cart,
-                            discountAmount: discountAmount,
-                            discountController: discountController
                         }
                     }} >
                     <button className="checkoutbtn" style={{
